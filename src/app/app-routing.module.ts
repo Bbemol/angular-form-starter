@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { StepComponent } from './component/step/step.component';
 import { LandingComponent } from './pages/landing/landing.component';
 
 const routes: Routes = [
@@ -10,7 +11,18 @@ const routes: Routes = [
   },
   {
     path: "landing",
-    component: LandingComponent
+    component: LandingComponent,
+    children: [
+      {
+        path: "",
+        redirectTo: "step/0",
+        pathMatch: "full"
+      },
+      {
+        path: "step/:id",
+        component: StepComponent
+      }
+    ]
   }
 ];
 

@@ -4,13 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './pages/landing/landing.component';
-import { Step01Component } from './steps/step01/step01.component';
+import { StepComponent } from './component/step/step.component';
+import { StepsNavComponent } from './component/steps-nav/steps-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    Step01Component
+    StepComponent,
+    StepsNavComponent
   ],
   imports: [
     BrowserModule,
